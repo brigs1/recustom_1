@@ -11,8 +11,8 @@ logger = datasets.logging.get_logger(__name__)
 
 
 _CITATION = """\
-@article{Jaume2019recustomAD,
-  title={recustom: A Dataset for Form Understanding in Noisy Scanned Documents},
+@article{Jaume2019recustom_1AD,
+  title={recustom_1: A Dataset for Form Understanding in Noisy Scanned Documents},
   author={Guillaume Jaume and H. K. Ekenel and J. Thiran},
   journal={2019 International Conference on Document Analysis and Recognition Workshops (ICDARW)},
   year={2019},
@@ -37,21 +37,21 @@ def normalize_bbox(bbox, size):
         int(1000 * bbox[3] / size[1]),
     ]
 
-class recustomConfig(datasets.BuilderConfig):
-    """BuilderConfig for recustom"""
+class recustom_1Config(datasets.BuilderConfig):
+    """BuilderConfig for recustom_1"""
 
     def __init__(self, **kwargs):
-        """BuilderConfig for recustom.
+        """BuilderConfig for recustom_1.
         Args:
           **kwargs: keyword arguments forwarded to super.
         """
-        super(recustomConfig, self).__init__(**kwargs)
+        super(recustom_1Config, self).__init__(**kwargs)
 
-class recustom(datasets.GeneratorBasedBuilder):
-    """recustom dataset."""
+class recustom_1(datasets.GeneratorBasedBuilder):
+    """recustom_1 dataset."""
 
     BUILDER_CONFIGS = [
-        recustomConfig(name="recustom", version=datasets.Version("1.0.0"), description="recustom dataset"),
+        recustom_1Config(name="recustom_1", version=datasets.Version("1.0.0"), description="recustom_1 dataset"),
     ]
 
     def _info(self):
